@@ -1,0 +1,11 @@
+<%= render "header" %>
+<%= link_to "Edit this Item", edit_product_path %>
+<%= link_to "Delete", @product, :confirm => "Are you sure you wish to delete this product?", :method => :delete %>
+
+<h3><%= @product.name %></h3>
+<p>
+  $<%= (@product.price_in_cents.to_f) / 100 %>
+</p>
+<p>
+  <%= @product.description %>
+</p>
