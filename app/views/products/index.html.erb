@@ -5,7 +5,10 @@
 <ul>
 <% @products.each do |p| %>
   <li>
-    <%= link_to p.name, product_path(p.id) %>
+    <div>
+      <%= link_to p.name, product_path(p.id) %>
+      $<%= p.format_price %>
+    </div>
   </li>
 <% end %>
 </ul>

@@ -4,7 +4,7 @@
 
 <h3><%= @product.name %></h3>
 <p>
-  $<%= sprintf("%.2f", (@product.price_in_cents.to_f) / 100) %>
+  $<%= @product.format_price %>
 </p>
 <p>
   <%= @product.description %>
