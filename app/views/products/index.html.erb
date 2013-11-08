@@ -1,13 +1,6 @@
 <%= render "header" %>
 
 <%= link_to "Add New Product", new_product_path %>
-<%= link_to "Create an Account", new_user_path %>
-<% if session[:user_id].nil? %>
-  <%= link_to "Log in", new_session_path %>
-<% else %>
-  <%= link_to "Log out", :method => session.destroy %>
-<% end %>
-
 
 <ul>
 <% @products.each do |p| %>
